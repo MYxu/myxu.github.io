@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://myxu.github.io/about/index.html</loc>
+    
+    <lastmod>2017-11-15T16:01:53.899Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://myxu.github.io/2017/09/15/hello-world/</loc>
     
     <lastmod>2017-11-15T14:57:54.872Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>https://myxu.github.io/repository/index.html</loc>
     
     <lastmod>2017-09-15T06:57:24.440Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://myxu.github.io/about/index.html</loc>
-    
-    <lastmod>2017-09-15T06:57:24.438Z</lastmod>
     
   </url>
   
