@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://myxu.github.io/tags/index.html</loc>
+    
+    <lastmod>2017-11-15T17:02:31.757Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myxu.github.io/links/index.html</loc>
+    
+    <lastmod>2017-11-15T17:02:08.302Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myxu.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-11-15T17:01:43.939Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myxu.github.io/books/index.html</loc>
+    
+    <lastmod>2017-11-15T17:01:27.841Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://myxu.github.io/2017/09/15/hello-world/</loc>
     
-    <lastmod>2017-11-15T16:46:52.358Z</lastmod>
+    <lastmod>2017-11-15T16:48:13.468Z</lastmod>
     
   </url>
   
@@ -23,20 +51,6 @@
   </url>
   
   <url>
-    <loc>https://myxu.github.io/links/index.html</loc>
-    
-    <lastmod>2017-09-15T07:03:20.277Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://myxu.github.io/books/index.html</loc>
-    
-    <lastmod>2017-09-15T07:02:41.542Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://myxu.github.io//404.html</loc>
     
     <lastmod>2017-09-15T07:01:24.436Z</lastmod>
@@ -44,23 +58,9 @@
   </url>
   
   <url>
-    <loc>https://myxu.github.io/categories/index.html</loc>
-    
-    <lastmod>2017-09-15T06:57:24.440Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://myxu.github.io/repository/index.html</loc>
     
     <lastmod>2017-09-15T06:57:24.440Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://myxu.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-09-15T06:57:14.046Z</lastmod>
     
   </url>
   
