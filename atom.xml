@@ -5,9 +5,9 @@
   <subtitle>MYXuu</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://myxu.github.io/"/>
+  <link href="myxu.github.io/"/>
   <updated>2017-11-16T00:33:54.479Z</updated>
-  <id>https://myxu.github.io/</id>
+  <id>myxu.github.io/</id>
   
   <author>
     <name>MYXuu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>手动创建Oracle数据库</title>
-    <link href="https://myxu.github.io/2017/11/16/%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BAOracle%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>https://myxu.github.io/2017/11/16/手动创建Oracle数据库/</id>
+    <link href="myxu.github.io/2017/11/16/%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BAOracle%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>myxu.github.io/2017/11/16/手动创建Oracle数据库/</id>
     <published>2017-11-15T17:09:49.000Z</published>
     <updated>2017-11-16T00:33:54.479Z</updated>
     
@@ -35,17 +35,17 @@
     
     </summary>
     
-      <category term="Oracle" scheme="https://myxu.github.io/categories/Oracle/"/>
+      <category term="Oracle" scheme="myxu.github.io/categories/Oracle/"/>
     
     
-      <category term="Oracle" scheme="https://myxu.github.io/tags/Oracle/"/>
+      <category term="Oracle" scheme="myxu.github.io/tags/Oracle/"/>
     
   </entry>
   
   <entry>
     <title>hello hexo</title>
-    <link href="https://myxu.github.io/2017/09/15/hello-hexo/"/>
-    <id>https://myxu.github.io/2017/09/15/hello-hexo/</id>
+    <link href="myxu.github.io/2017/09/15/hello-hexo/"/>
+    <id>myxu.github.io/2017/09/15/hello-hexo/</id>
     <published>2017-09-15T05:45:24.000Z</published>
     <updated>2017-11-15T14:57:28.404Z</updated>
     
@@ -60,12 +60,12 @@
     
     </summary>
     
-      <category term="hexo" scheme="https://myxu.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="myxu.github.io/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="https://myxu.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="myxu.github.io/tags/hexo/"/>
     
-      <category term="php" scheme="https://myxu.github.io/tags/php/"/>
+      <category term="php" scheme="myxu.github.io/tags/php/"/>
     
   </entry>
   
