@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myxu.github.io/"/>
-  <updated>2017-12-04T15:16:11.525Z</updated>
+  <updated>2017-12-04T15:26:37.983Z</updated>
   <id>https://myxu.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://myxu.github.io/2017/12/04/in-bad-mod/"/>
     <id>https://myxu.github.io/2017/12/04/in-bad-mod/</id>
     <published>2017-12-04T15:10:23.000Z</published>
-    <updated>2017-12-04T15:16:11.525Z</updated>
+    <updated>2017-12-04T15:26:37.983Z</updated>
     
-    <content type="html"><![CDATA[<div><br>    <object width="340" height="86" data="http://music.163.com/style/swf/widget.swf?sid=188900&type=2&auto=0&width=320&height=66" type="application/x-shockwave-flash"></object><br></div>  <hr>  <div><br><object width="330" height="450" data="http://music.163.com/style/swf/widget.swf?sid=19742382&type=0&auto=0&width=310&height=430" type="application/x-shockwave-flash"></object><br></div>  <pre><code>&lt;hr /&gt;  </code></pre><div><br><object width="330" height="450" data="http://music.163.com/style/swf/widget.swf?sid=19971812&type=0&auto=0&width=310&height=430" type="application/x-shockwave-flash"></object><br></div>  ]]></content>
+    <content type="html"><![CDATA[<iframe frameborder="0" border="1" marginwidth="0" marginheight="0" width="333" height="77" src="//music.163.com/outchain/player?type=2&id=33166539&auto=1&height=66"><br></iframe>  ]]></content>
     
     <summary type="html">
     
       
       
-        &lt;div&gt;&lt;br&gt;    &lt;object width=&quot;340&quot; height=&quot;86&quot; data=&quot;http://music.163.com/style/swf/widget.swf?sid=188900&amp;type=2&amp;auto=0&amp;width=320&amp;height=66&quot; t
+        &lt;iframe frameborder=&quot;0&quot; border=&quot;1&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;333&quot; height=&quot;77&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=3
       
     
     </summary>
@@ -42,7 +42,7 @@
     <link href="https://myxu.github.io/2017/11/16/manualy-creating-the-oracle-database/"/>
     <id>https://myxu.github.io/2017/11/16/manualy-creating-the-oracle-database/</id>
     <published>2017-11-15T17:09:49.000Z</published>
-    <updated>2017-12-04T15:16:11.513Z</updated>
+    <updated>2017-12-04T15:26:38.086Z</updated>
     
     <content type="html"><![CDATA[<p>电脑没电了，明天再整理。辣鸡学校，天天断电<br>…</p>]]></content>
     
@@ -68,7 +68,7 @@
     <link href="https://myxu.github.io/2017/09/15/helo-hexo/"/>
     <id>https://myxu.github.io/2017/09/15/helo-hexo/</id>
     <published>2017-09-15T05:45:24.000Z</published>
-    <updated>2017-12-04T15:16:11.342Z</updated>
+    <updated>2017-12-04T15:26:38.058Z</updated>
     
     <content type="html"><![CDATA[<p>搞了一天，基本将自己想要的东西都弄好了，接下来就要好好坚持总结、写技术博客了</p>]]></content>
     
