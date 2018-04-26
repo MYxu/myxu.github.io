@@ -17,17 +17,21 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>友情链接 | MYXuu&#39;Blog</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="友情链接">
-<meta property="og:url" content="https://myxu.github.io/links/index.html">
+  <title>Hexo博客文章插入图片方式 | MYXuu&#39;Blog</title>
+  <meta name="description" content="前言通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：   将图片存放在本地引用 将图片上传至一些CDN服务上，在通过链接引用   这里我就主要说明第一种方式是如何实现。 本地引用绝对路径若是Hexo博客中只用到少数的图片的时，可以在hexo项目source文件夹下创建一个images文件夹统一存放需要的图片，然后再通过markdown语法访问">
+<meta name="keywords" content="hexo文章插入图片">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客文章插入图片方式">
+<meta property="og:url" content="https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/index.html">
 <meta property="og:site_name" content="MYXuu&#39;Blog">
+<meta property="og:description" content="前言通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：   将图片存放在本地引用 将图片上传至一些CDN服务上，在通过链接引用   这里我就主要说明第一种方式是如何实现。 本地引用绝对路径若是Hexo博客中只用到少数的图片的时，可以在hexo项目source文件夹下创建一个images文件夹统一存放需要的图片，然后再通过markdown语法访问">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-15T17:02:08.302Z">
+<meta property="og:updated_time" content="2018-04-26T15:05:20.243Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="友情链接">
+<meta name="twitter:title" content="Hexo博客文章插入图片方式">
+<meta name="twitter:description" content="前言通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：   将图片存放在本地引用 将图片上传至一些CDN服务上，在通过链接引用   这里我就主要说明第一种方式是如何实现。 本地引用绝对路径若是Hexo博客中只用到少数的图片的时，可以在hexo项目source文件夹下创建一个images文件夹统一存放需要的图片，然后再通过markdown语法访问">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://myxu.github.io/links/index.html">
+  <link rel="canonical" href="https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/index.html">
   
     <link rel="alternate" href="/atom.xml" title="MYXuu&#39;Blog" type="application/atom+xml">
   
@@ -46,7 +50,7 @@
 </head>
 
 
-<body class="main-center no-sidebar" itemscope="" itemtype="http://schema.org/WebPage">
+<body class="main-center" itemscope="" itemtype="http://schema.org/WebPage">
   <header class="header" itemscope="" itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
@@ -395,22 +399,128 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="article article-links article-type-list" itemscope="">
-  <header class="article-header">
-    <h1 itemprop="title">友情链接</h1>
-    <p class="text-muted">
-      欢迎交换链接，可在当前页面留言
-    </p>
-  </header>
-  <div class="article-body">
-    <div class="row">
+  
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope="" itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <nav id="toc" class="article-toc">
+      <h3 class="toc-title">文章目录</h3>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地引用"><span class="toc-number">2.</span> <span class="toc-text">本地引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#绝对路径"><span class="toc-number">2.1.</span> <span class="toc-text">绝对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相对路径"><span class="toc-number">2.2.</span> <span class="toc-text">相对路径</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CDN"><span class="toc-number">3.</span> <span class="toc-text">CDN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关链接"><span class="toc-number">4.</span> <span class="toc-text">相关链接</span></a></li></ol>
+    </nav>
+  </div>
+</aside>
+
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-Hexo博客文章插入图片方式" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo博客文章插入图片方式
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2018/04/26/Hexo博客文章插入图片方式/" class="article-date">
+	  <time datetime="2018-04-26T14:58:30.000Z" itemprop="datePublished">2018-04-26</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link" href="/tags/hexo文章插入图片/">hexo文章插入图片</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/04/26/Hexo博客文章插入图片方式/#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 613(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry markdown-body" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：</p>
+<blockquote>
+<ul>
+<li>将图片存放在本地引用</li>
+<li>将图片上传至一些CDN服务上，在通过链接引用</li>
+</ul>
+</blockquote>
+<p>这里我就主要说明第一种方式是如何实现。</p>
+<h3 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h3><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>若是Hexo博客中只用到少数的图片的时，可以在hexo项目<code>source</code>文件夹下创建一个<code>images</code>文件夹统一存放需要的图片，然后再通过markdown语法访问即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---source</span><br><span class="line">      |---_post(文章存放文件夹)</span><br><span class="line">	  |      |---pictureTest.md</span><br><span class="line">	  |</span><br><span class="line">	  |---_images（图片存放文件夹）</span><br><span class="line">	         |---picture.png</span><br><span class="line"></span><br><span class="line">markdown访问图片：![文字说明](/images/picture.png)</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>这样的方式，图片不仅可以在文章中引用，还可以在首页内容中访问。</p>
+<h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><p>上面的访问方式不好的地方就是图片多时容易混杂，不容易找到所需的。因此，一般最好对应文章引用的图片存放在相对应的目录。目前hexo已经实现了在创建新文章的时候创建对应的文章目录：</p>
+<p><code>hexo项目下_config.yml文件</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder:true</span><br></pre></td></tr></table></figure></p>
+<p>完成上述设置之后，在创建新文章的时候（hexo new “artice_name”），hexo会自动在文章同级目录下创建一个与文章同名的目录，我们可以将与文章相关的资源放置在该目录下，便于管理所需的资源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---source</span><br><span class="line">      |---_post(文章存放文件夹)</span><br><span class="line">	  |      |---pictureTest.md</span><br><span class="line">	  |      |</span><br><span class="line">	  |      |---pictureTest(与文章同名的文件夹)</span><br></pre></td></tr></table></figure></p>
+<p><strong>注意了：</strong>使用该方式在markdown文章中将不能再采用markdown语法或者相对路径去引用图片了，有可能会造成资源显示不正确。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">引用语法：&#123;% asset_img pictureTest.png this is an example image desc %&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>若是想使用该方式的同时能使用markdown语法，则需要安装插件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在hexo项目下：install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure></p>
+<p>即可使用markdown语法访问:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![image desc](/pictureTest.jpg)</span><br></pre></td></tr></table></figure></p>
+<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>这种方式一般是将图片上传至CDN中存储，同时得到图片的访问链接。常见比如七牛云，有空可以去尝试一下。</p>
+<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><ul>
+<li><a href="https://hexo.io/zh-cn/docs/asset-folders.html" rel="external nofollow noopener noreferrer" target="_blank">https://hexo.io/zh-cn/docs/asset-folders.html</a></li>
+<li><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" rel="external nofollow noopener noreferrer" target="_blank">https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/</a></li>
+<li><a href="https://www.jianshu.com/p/c2ba9533088a" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/c2ba9533088a</a></li>
+</ul>
+
       
     </div>
-  </div>
-</article>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/" title="Hexo博客文章插入图片方式" target="_blank" rel="external">https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external nofollow noopener noreferrer">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
 
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/MYxu" target="_blank" class="img-burn thumb-sm visible-lg" rel="external nofollow noopener noreferrer">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/MYxu" target="_blank" rel="external nofollow noopener noreferrer"><span class="text-dark">MYXuu</span><small class="ml-1x">Web Developer</small></a></h3>
+        <div>过好每一天...</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
   
+    
   <section id="comments">
   	
        
@@ -420,6 +530,89 @@
     
   </section>
 
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom="">
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2018/04/26/centOS7yum安装JDK8/" title="centOS7 yum安装JDK8"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+    <li class="toggle-toc">
+      <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false" title="文章目录" role="button">
+        <span>[&nbsp;</span><span>文章目录</span>
+        <i class="text-collapsed icon icon-anchor"></i>
+        <i class="text-in icon icon-close"></i>
+        <span>]</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫">
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
@@ -473,6 +666,10 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
     
     
+        
+
+
+    
     
         
     
@@ -482,7 +679,7 @@ var gitment = new Gitment({
   // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
   // https://github.com/imsun/gitment/issues/55
   // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
-  id: '友情链接', 
+  id: 'Hexo博客文章插入图片方式', 
   owner: 'MYxu', // 可以是你的GitHub用户名，也可以是github id
   repo: 'myxu.github.io',
   oauth: {

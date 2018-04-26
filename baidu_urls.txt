@@ -1,1 +1,1 @@
-https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/
+https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/
