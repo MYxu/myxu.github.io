@@ -26,13 +26,13 @@
 <meta property="og:site_name" content="MYXuu&#39;Blog">
 <meta property="og:description" content="开发环境 腾讯云服务器 CentOS 7.2 64位  检查系统是否已自带open-jdk命令  rpm -qa | grep java 或者 rpm -qa | grep jdk  ps:如果没有显示则说明尚未安装jdk，若是已经安装可以通过命令rpm -qa | grep java | xargs rpm -e --nodeps批量卸载所有带java的文件 安装openjdk(无需配置path">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/index_files/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png">
-<meta property="og:image" content="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/index_files/0e083cdd-bf3d-4e1f-9f0a-eb29bd624a59.png">
-<meta property="og:updated_time" content="2018-04-26T11:12:33.199Z">
+<meta property="og:image" content="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/java_version.png">
+<meta property="og:updated_time" content="2018-04-26T12:26:50.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centOS7 yum安装JDK8">
 <meta name="twitter:description" content="开发环境 腾讯云服务器 CentOS 7.2 64位  检查系统是否已自带open-jdk命令  rpm -qa | grep java 或者 rpm -qa | grep jdk  ps:如果没有显示则说明尚未安装jdk，若是已经安装可以通过命令rpm -qa | grep java | xargs rpm -e --nodeps批量卸载所有带java的文件 安装openjdk(无需配置path">
-<meta name="twitter:image" content="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/index_files/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png">
+<meta name="twitter:image" content="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png">
   <!-- Canonical links -->
   <link rel="canonical" href="https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/index.html">
   
@@ -449,7 +449,7 @@
 <li>yum list java*</li>
 <li>yum list java-1.8*(指定搜索1.8版本)</li>
 </ul>
-<p>通过以上命令可以检索出当前yum源中openjdk版本为1.8.0<br><img src="index_files/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png" alt=""></p>
+<p>通过以上命令可以检索出当前yum源中openjdk版本为1.8.0<br><img src="/2018/04/26/centOS7yum安装JDK8/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png" alt=""></p>
 <h4 id="安装1-8版本的open-jdk"><a href="#安装1-8版本的open-jdk" class="headerlink" title="安装1.8版本的open-jdk"></a>安装1.8版本的open-jdk</h4><p>这里我们需要安装java-1.8版本的所有文件，安装命令：</p>
 <ul>
 <li>yum install -y java-1.8.0-openjdk*</li>
@@ -458,7 +458,7 @@
 <ul>
 <li>java -version</li>
 </ul>
-<p><img src="index_files/0e083cdd-bf3d-4e1f-9f0a-eb29bd624a59.png" alt=""></p>
+<img src="/2018/04/26/centOS7yum安装JDK8/java_version.png" title="jdk安装成功">
 <p>出现以上类似信息则说明安装成功了。</p>
 
       
