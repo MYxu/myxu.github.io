@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://myxu.github.io/"/>
-  <updated>2018-04-26T07:51:05.301Z</updated>
+  <updated>2018-04-26T11:12:33.199Z</updated>
   <id>https://myxu.github.io/</id>
   
   <author>
@@ -17,22 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>centOS7yum安装JDK8</title>
+    <title>centOS7 yum安装JDK8</title>
     <link href="https://myxu.github.io/2018/04/26/centOS7yum%E5%AE%89%E8%A3%85JDK8/"/>
     <id>https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/</id>
     <published>2018-04-26T07:43:33.000Z</published>
-    <updated>2018-04-26T07:51:05.301Z</updated>
+    <updated>2018-04-26T11:12:33.199Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="开发环境"><a href="#开发环境" class="headerlink" title="# 开发环境"></a># 开发环境</h3><ul><li>腾讯云服务器 CentOS 7.2 64位</li></ul><h3 id="检查系统是否已自带open-jdk"><a href="#检查系统是否已自带open-jdk" class="headerlink" title="# 检查系统是否已自带open-jdk"></a># 检查系统是否已自带open-jdk</h3><p><code>命令</code></p><ul><li>rpm -qa | grep java 或者 rpm -qa | grep jdk</li></ul><p><strong>ps:</strong>如果没有显示则说明尚未安装jdk，若是已经安装可以通过命令<code>rpm -qa | grep java | xargs rpm -e --nodeps</code>批量卸载所有带java的文件</p><h3 id="安装openjdk-无需配置path环境变量"><a href="#安装openjdk-无需配置path环境变量" class="headerlink" title="# 安装openjdk(无需配置path环境变量)"></a># 安装openjdk(无需配置path环境变量)</h3><h4 id="1-检索yum源中的jdk包"><a href="#1-检索yum源中的jdk包" class="headerlink" title="1.检索yum源中的jdk包"></a>1.检索yum源中的jdk包</h4><p><code>命令</code></p><ul><li>yum list java*</li><li>yum list java-1.8*(指定搜索1.8版本)</li></ul><p>通过以上命令可以检索出当前yum源中openjdk版本为1.8.0<br><img src="index_files/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png" alt=""></p><h4 id="2-安装1-8版本的open-jdk"><a href="#2-安装1-8版本的open-jdk" class="headerlink" title="2.安装1.8版本的open-jdk"></a>2.安装1.8版本的open-jdk</h4><p>这里我们需要安装java-1.8版本的所有文件，安装命令：</p><ul><li>yum install -y java-1.8.0-openjdk*</li></ul><h4 id="3-检查是否安装成功"><a href="#3-检查是否安装成功" class="headerlink" title="3.检查是否安装成功"></a>3.检查是否安装成功</h4><p><code>命令</code></p><ul><li>java -version</li></ul><p><img src="index_files/0e083cdd-bf3d-4e1f-9f0a-eb29bd624a59.png" alt=""></p><p>出现以上类似信息则说明安装成功了。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="开发环境"><a href="#开发环境" class="headerlink" title="开发环境"></a>开发环境</h3><ul><li>腾讯云服务器 CentOS 7.2 64位</li></ul><h3 id="检查系统是否已自带open-jdk"><a href="#检查系统是否已自带open-jdk" class="headerlink" title="检查系统是否已自带open-jdk"></a>检查系统是否已自带open-jdk</h3><p><code>命令</code></p><ul><li>rpm -qa | grep java 或者 rpm -qa | grep jdk</li></ul><p><strong>ps:</strong>如果没有显示则说明尚未安装jdk，若是已经安装可以通过命令<code>rpm -qa | grep java | xargs rpm -e --nodeps</code>批量卸载所有带java的文件</p><h3 id="安装openjdk-无需配置path环境变量"><a href="#安装openjdk-无需配置path环境变量" class="headerlink" title="安装openjdk(无需配置path环境变量)"></a>安装openjdk(无需配置path环境变量)</h3><h4 id="检索yum源中的jdk包"><a href="#检索yum源中的jdk包" class="headerlink" title="检索yum源中的jdk包"></a>检索yum源中的jdk包</h4><p><code>命令</code></p><ul><li>yum list java*</li><li>yum list java-1.8*(指定搜索1.8版本)</li></ul><p>通过以上命令可以检索出当前yum源中openjdk版本为1.8.0<br><img src="index_files/ec3d86dd-a310-475b-b1fc-511b4a4bcd1f.png" alt=""></p><h4 id="安装1-8版本的open-jdk"><a href="#安装1-8版本的open-jdk" class="headerlink" title="安装1.8版本的open-jdk"></a>安装1.8版本的open-jdk</h4><p>这里我们需要安装java-1.8版本的所有文件，安装命令：</p><ul><li>yum install -y java-1.8.0-openjdk*</li></ul><h4 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h4><p><code>命令</code></p><ul><li>java -version</li></ul><p><img src="index_files/0e083cdd-bf3d-4e1f-9f0a-eb29bd624a59.png" alt=""></p><p>出现以上类似信息则说明安装成功了。</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;开发环境&quot;&gt;&lt;a href=&quot;#开发环境&quot; class=&quot;headerlink&quot; title=&quot;# 开发环境&quot;&gt;&lt;/a&gt;# 开发环境&lt;/h3&gt;&lt;ul&gt;
+        &lt;h3 id=&quot;开发环境&quot;&gt;&lt;a href=&quot;#开发环境&quot; class=&quot;headerlink&quot; title=&quot;开发环境&quot;&gt;&lt;/a&gt;开发环境&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;腾讯云服务器 CentOS 7.2 64位&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;检查系统是否已自带op
+&lt;h3 id=&quot;检查系统是否已自带open-j
       
     
     </summary>
