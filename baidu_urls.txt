@@ -1,1 +1,1 @@
-https://myxu.github.io/2017/12/04/in-bad-mod/
+https://myxu.github.io/2018/04/26/centOS7yum安装JDK8/
