@@ -17,21 +17,40 @@
   <meta http-equiv="window-target" content="_top">
   
   
-  <title>Hexo博客文章插入图片方式 | MYXuu&#39;Blog</title>
-  <meta name="description" content="前言通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：   将图片存放在本地引用 将图片上传至一些CDN服务上，在通过链接引用   这里我就主要说明第一种方式是如何实现。 本地引用绝对路径若是Hexo博客中只用到少数的图片的时，可以在hexo项目source文件夹下创建一个images文件夹统一存放需要的图片，然后再通过markdown语法访问">
-<meta name="keywords" content="hexo文章插入图片">
+  <title>IDEA 部署JavaWeb项目到远程服务器的Tomcat | MYXuu&#39;Blog</title>
+  <meta name="description" content="前言应用场景 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在本地IDEA下开发JavaWeb项目并部署到远程服务器上的Tomcat，传统方式是在本地运行项目生成war文件.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;但其实我们可以通过IDEA以及相关配置，来实现在IDEA运行项目的同时自动将项目上传部署到服务器上的Tomcat。  实验环境、工具 腾讯云服务器 CentOS 7.2 64位">
+<meta name="keywords" content="Tomcat">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客文章插入图片方式">
-<meta property="og:url" content="https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/index.html">
+<meta property="og:title" content="IDEA 部署JavaWeb项目到远程服务器的Tomcat">
+<meta property="og:url" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/index.html">
 <meta property="og:site_name" content="MYXuu&#39;Blog">
-<meta property="og:description" content="前言通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：   将图片存放在本地引用 将图片上传至一些CDN服务上，在通过链接引用   这里我就主要说明第一种方式是如何实现。 本地引用绝对路径若是Hexo博客中只用到少数的图片的时，可以在hexo项目source文件夹下创建一个images文件夹统一存放需要的图片，然后再通过markdown语法访问">
+<meta property="og:description" content="前言应用场景 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在本地IDEA下开发JavaWeb项目并部署到远程服务器上的Tomcat，传统方式是在本地运行项目生成war文件.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;但其实我们可以通过IDEA以及相关配置，来实现在IDEA运行项目的同时自动将项目上传部署到服务器上的Tomcat。  实验环境、工具 腾讯云服务器 CentOS 7.2 64位">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-26T15:05:20.243Z">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/jps.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/createProject.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/Edit_Configurations.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/AddRemoteTomcatConfig.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_1.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_2.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_3.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_4.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_5.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_6.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_7.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_8.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_10.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_11.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_12.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_13.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/DeployTest.png">
+<meta property="og:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/success.png">
+<meta property="og:updated_time" content="2018-04-30T14:12:27.118Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo博客文章插入图片方式">
-<meta name="twitter:description" content="前言通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：   将图片存放在本地引用 将图片上传至一些CDN服务上，在通过链接引用   这里我就主要说明第一种方式是如何实现。 本地引用绝对路径若是Hexo博客中只用到少数的图片的时，可以在hexo项目source文件夹下创建一个images文件夹统一存放需要的图片，然后再通过markdown语法访问">
+<meta name="twitter:title" content="IDEA 部署JavaWeb项目到远程服务器的Tomcat">
+<meta name="twitter:description" content="前言应用场景 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;在本地IDEA下开发JavaWeb项目并部署到远程服务器上的Tomcat，传统方式是在本地运行项目生成war文件.&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;但其实我们可以通过IDEA以及相关配置，来实现在IDEA运行项目的同时自动将项目上传部署到服务器上的Tomcat。  实验环境、工具 腾讯云服务器 CentOS 7.2 64位">
+<meta name="twitter:image" content="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/jps.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/index.html">
+  <link rel="canonical" href="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/index.html">
   
     <link rel="alternate" href="/atom.xml" title="MYXuu&#39;Blog" type="application/atom+xml">
   
@@ -406,21 +425,21 @@
   <div class="slimContent">
     <nav id="toc" class="article-toc">
       <h3 class="toc-title">文章目录</h3>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地引用"><span class="toc-number">2.</span> <span class="toc-text">本地引用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#绝对路径"><span class="toc-number">2.1.</span> <span class="toc-text">绝对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相对路径"><span class="toc-number">2.2.</span> <span class="toc-text">相对路径</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CDN"><span class="toc-number">3.</span> <span class="toc-text">CDN</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相关链接"><span class="toc-number">4.</span> <span class="toc-text">相关链接</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#应用场景"><span class="toc-number">1.1.</span> <span class="toc-text">应用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实验环境、工具"><span class="toc-number">1.2.</span> <span class="toc-text">实验环境、工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#必须的环境配置"><span class="toc-number">1.3.</span> <span class="toc-text">必须的环境配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务器端配置"><span class="toc-number">2.</span> <span class="toc-text">服务器端配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#相关配置"><span class="toc-number">2.1.</span> <span class="toc-text">相关配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置后Tomcat的启动方式"><span class="toc-number">2.2.</span> <span class="toc-text">配置后Tomcat的启动方式</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#本地配置"><span class="toc-number">3.</span> <span class="toc-text"># 本地配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#IDEA创建JavaWeb项目"><span class="toc-number">3.1.</span> <span class="toc-text">IDEA创建JavaWeb项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IDEA的Tomcat配置"><span class="toc-number">3.2.</span> <span class="toc-text">IDEA的Tomcat配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署测试"><span class="toc-number">4.</span> <span class="toc-text"># 部署测试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考链接"><span class="toc-number">5.</span> <span class="toc-text"># 参考链接</span></a></li></ol>
     </nav>
   </div>
 </aside>
 
 <main class="main" role="main">
   <div class="content">
-  <article id="post-Hexo博客文章插入图片方式" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <article id="post-IDEA-部署JavaWeb项目到远程服务器的Tomcat" class="article article-type-post" itemscope="" itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo博客文章插入图片方式
+      IDEA 部署JavaWeb项目到远程服务器的Tomcat
     </h1>
   
 
@@ -428,60 +447,142 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/2018/04/26/Hexo博客文章插入图片方式/" class="article-date">
-	  <time datetime="2018-04-26T14:58:30.000Z" itemprop="datePublished">2018-04-26</time>
+	<a href="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/" class="article-date">
+	  <time datetime="2018-04-28T17:57:25.000Z" itemprop="datePublished">2018-04-29</time>
 	</a>
 </span>
         
   <span class="article-category">
     <i class="icon icon-folder"></i>
-    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+    <a class="article-category-link" href="/categories/IDEA的使用/">IDEA的使用</a>
   </span>
 
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link" href="/tags/hexo文章插入图片/">hexo文章插入图片</a>
+	<a class="article-tag-link" href="/tags/Tomcat/">Tomcat</a>
   </span>
 
 
         
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/04/26/Hexo博客文章插入图片方式/#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 613(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1,018(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry markdown-body" itemprop="articleBody">
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：</p>
-<blockquote>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><h4 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h4><blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在本地IDEA下开发JavaWeb项目并部署到远程服务器上的Tomcat，传统方式是在本地运行项目生成war文件.<br>&nbsp;&nbsp;&nbsp;&nbsp;但其实我们可以通过IDEA以及相关配置，来实现在IDEA运行项目的同时自动将项目上传部署到服务器上的Tomcat。</p>
+</blockquote>
+<h4 id="实验环境、工具"><a href="#实验环境、工具" class="headerlink" title="实验环境、工具"></a>实验环境、工具</h4><ul>
+<li><p>腾讯云服务器 CentOS 7.2 64位</p>
+</li>
+<li><p>Xshell：用于在本地连接腾讯云服务器，远程操作服务器的终端</p>
+</li>
+<li><p>IDEA 2017.2旗舰版(Ultimate)</p>
+</li>
+<li><p>本地 Windows10 OS</p>
+</li>
+</ul>
+<h4 id="必须的环境配置"><a href="#必须的环境配置" class="headerlink" title="必须的环境配置"></a>必须的环境配置</h4><p>远程服务器上面必须先安装<code>JDK</code>跟<code>Tomcat</code>，确保能正常访问到Tomcat默认的主页</p>
 <ul>
-<li>将图片存放在本地引用</li>
-<li>将图片上传至一些CDN服务上，在通过链接引用</li>
+<li><p><strong>java-1.8.0-openjdk</strong>，参考<a href="https://myxu.github.io/2018/04/26/centOS7yum%E5%AE%89%E8%A3%85JDK8/">CentOS yum 安装JDK8</a></p>
+</li>
+<li><p><strong>Tomcat9.0.7</strong>，参考<a href="https://myxu.github.io/2018/04/28/CentOS7-%E5%AE%89%E8%A3%85Tomcat9/">CentOS7 安装Tomcat9</a></p>
+</li>
+</ul>
+<hr>
+<h3 id="服务器端配置"><a href="#服务器端配置" class="headerlink" title="服务器端配置"></a>服务器端配置</h3><h4 id="相关配置"><a href="#相关配置" class="headerlink" title="相关配置"></a>相关配置</h4><p>参考<a href="https://www.jetbrains.com/help/idea/2016.1/run-debug-configuration-tomcat-server.html" rel="external nofollow noopener noreferrer" target="_blank">IDEA官网</a>的相关配置，来启动jmx。</p>
+<ul>
+<li><p><strong>cd /usr/local/webDevelopmentTools/tomcat/apache-tomcat-9.0.7/bin</strong> &nbsp;(Tomcat安装目录下的bin文件夹)</p>
+</li>
+<li><p><strong>vim catalina.sh</strong></p>
+</li>
+<li><p>在<strong>catalina.sh</strong>文件最前面添加以下配置</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">export CATALINA_OPTS=&quot;-Dcom.sun.management.jmxremote</span><br><span class="line">-Dcom.sun.management.jmxremote.port=10999 （替换成你的服务器可用的端口）</span><br><span class="line">-Dcom.sun.management.jmxremote.ssl=false</span><br><span class="line">-Dcom.sun.management.jmxremote.authenticate=false</span><br><span class="line">-Djava.rmi.server.hostname=119.29.251.126&quot; （替换成你的服务器IP）</span><br><span class="line"></span><br><span class="line">export JAVA_OPTS=&quot;-Dcom.sun.management.jmxremote=</span><br><span class="line">-Dcom.sun.management.jmxremote.port=10999</span><br><span class="line">-Dcom.sun.management.jmxremote.ssl=false</span><br><span class="line">-Dcom.sun.management.jmxremote.authenticate=false&quot;</span><br></pre></td></tr></table></figure>
+<p><br><code>注意</code>：在网上找资料的同时，发现很多人按照着网上的成功教程也没法配成功，其实自己途中也出现了很多问题，但我觉得最大、最根本的问题就是<strong>端口被占用</strong>，因此在配置之前一定要检测一下配置的端口是否可用。</p>
+<blockquote>
+<p><strong>netstat -anp | grep 1099(需要检测的端口号)</strong><br>该命令用于检测端口是否可用，若是没有任何显示信息则说明可用</p>
+</blockquote>
+<h4 id="配置后Tomcat的启动方式"><a href="#配置后Tomcat的启动方式" class="headerlink" title="配置后Tomcat的启动方式"></a>配置后Tomcat的启动方式</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;在这之前基本都是通过systemctl start xxxx.service的方式来启动Tomcat，其实本质就是执行Tomcat安装目录下bin文件夹中的<strong>startup.sh</strong>脚本去启动的。<br>&nbsp;&nbsp;&nbsp;&nbsp;现在我们则需要通过<strong>catalina.sh</strong>脚本来启动Tomcat，该脚本同样是在Tomcat安装目录下的bin目录。</p>
+<blockquote>
+<p>启动命令：</p>
+<ul>
+<li><strong>cd /usr/local/webDevelopmentTools/tomcat/apache-tomcat-9.0.7/bin</strong></li>
+<li><strong>catalina.sh run &gt; /dev/null 2&gt;&amp;1 &amp;</strong></li>
 </ul>
 </blockquote>
-<p>这里我就主要说明第一种方式是如何实现。</p>
-<h3 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h3><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>若是Hexo博客中只用到少数的图片的时，可以在hexo项目<code>source</code>文件夹下创建一个<code>images</code>文件夹统一存放需要的图片，然后再通过markdown语法访问即可。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---source</span><br><span class="line">      |---_post(文章存放文件夹)</span><br><span class="line">	  |      |---pictureTest.md</span><br><span class="line">	  |</span><br><span class="line">	  |---_images（图片存放文件夹）</span><br><span class="line">	         |---picture.png</span><br><span class="line"></span><br><span class="line">markdown访问图片：![文字说明](/images/picture.png)</span><br></pre></td></tr></table></figure>
-<p><strong>注意：</strong>这样的方式，图片不仅可以在文章中引用，还可以在首页内容中访问。</p>
-<h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><p>上面的访问方式不好的地方就是图片多时容易混杂，不容易找到所需的。因此，一般最好对应文章引用的图片存放在相对应的目录。目前hexo已经实现了在创建新文章的时候创建对应的文章目录：</p>
-<p><code>hexo项目下_config.yml文件</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder:true</span><br></pre></td></tr></table></figure></p>
-<p>完成上述设置之后，在创建新文章的时候（hexo new “artice_name”），hexo会自动在文章同级目录下创建一个与文章同名的目录，我们可以将与文章相关的资源放置在该目录下，便于管理所需的资源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---source</span><br><span class="line">      |---_post(文章存放文件夹)</span><br><span class="line">	  |      |---pictureTest.md</span><br><span class="line">	  |      |</span><br><span class="line">	  |      |---pictureTest(与文章同名的文件夹)</span><br></pre></td></tr></table></figure></p>
-<p><strong>注意了：</strong>使用该方式在markdown文章中将不能再采用markdown语法或者相对路径去引用图片了，有可能会造成资源显示不正确。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">引用语法：&#123;% asset_img pictureTest.png this is an example image desc %&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>若是想使用该方式的同时能使用markdown语法，则需要安装插件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在hexo项目下：install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure></p>
-<p>即可使用markdown语法访问:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![image desc](/pictureTest.jpg)</span><br></pre></td></tr></table></figure></p>
-<h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>这种方式一般是将图片上传至CDN中存储，同时得到图片的访问链接。常见比如七牛云，有空可以去尝试一下。</p>
-<h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><ul>
-<li><a href="https://hexo.io/zh-cn/docs/asset-folders.html" rel="external nofollow noopener noreferrer" target="_blank">https://hexo.io/zh-cn/docs/asset-folders.html</a></li>
-<li><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" rel="external nofollow noopener noreferrer" target="_blank">https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/</a></li>
-<li><a href="https://www.jianshu.com/p/c2ba9533088a" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/c2ba9533088a</a></li>
+<p>其中“ &gt; /dev/null 2&gt;&amp;1 &amp;”是Linux中的命令：把标准输出和出错处理都放到回收站，这样就免得一大堆输出占领你的屏幕。</p>
+<p><br>启动之后，使用命令<code>jps</code>,若出现下面类似信息则说明配置成功或者通过浏览器去访问Tomcat的默认主页来检测。<br><img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/jps.png" title="Tomcat启动成功"></p>
+<hr>
+<h3 id="本地配置"><a href="#本地配置" class="headerlink" title="# 本地配置"></a># 本地配置</h3><h4 id="IDEA创建JavaWeb项目"><a href="#IDEA创建JavaWeb项目" class="headerlink" title="IDEA创建JavaWeb项目"></a>IDEA创建JavaWeb项目</h4><p>使用IDEA创建一个JavaWeb项目来进行测试，如何在IDEA创建一个JavaWeb项目参考<br><img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/createProject.png"></p>
+<h4 id="IDEA的Tomcat配置"><a href="#IDEA的Tomcat配置" class="headerlink" title="IDEA的Tomcat配置"></a>IDEA的Tomcat配置</h4><ul>
+<li><p>进行IDEA的Tomcat配置，选择<strong>Edit Configurations</strong></p>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/Edit_Configurations.png">
+</li>
+<li><p>新建一个Tomcat配置，跟以往的配置不同的是这次选择的Tomcat Server是<strong>Remote</strong>，即远程的服务器上Tomcat</p>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/AddRemoteTomcatConfig.png">
+</li>
+<li><p>运行配置名称、运行Tomcat版本、访问URL的配置、远程服务器上Tomcat连接配置</p>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_1.png">
+<blockquote>
+<p><strong>注意</strong>：在选择Tomcat版本时，所选择的只能看到本地的Tomcat，因此为了保证运行Tomcat的版本配置的正确，所以最好保证本地的Tomcat与远程服务器上的Tomcat版本一致，即本地安装的Tomcat与服务器上安装的Tomcat版本一致</p>
+</blockquote>
+</li>
+<li><p>远程服务器上Tomcat的配置</p>
+<ul>
+<li><p>配置连接类型以及创建一个新的服务器连接配置</p>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_2.png">
+</li>
+<li><p>创建一个新的服务器连接配置则会出现以下窗口</p>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_3.png">
+</li>
+</ul>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_4.png">
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_5.png">
+<ul>
+<li>配置服务器连接信息<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_6.png">
+</li>
+</ul>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_7.png">
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_8.png">
+<ul>
+<li>选择上一步配置的服务器连接信息
+</li>
+</ul>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_10.png">
+<ul>
+<li>配置Deployment<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_11.png">
+</li>
+</ul>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_12.png">
+<ul>
+<li>配置jmx端口，即与前面服务器配置的<code>Dcom.sun.management.jmxremote.port</code>一致<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/config_13.png">
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="部署测试"><a href="#部署测试" class="headerlink" title="# 部署测试"></a># 部署测试</h3><p>保存以上配置之后运行前面配置的远程Tomcat配置<br><img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/DeployTest.png"></p>
+<img src="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/success.png">
+<hr>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="# 参考链接"></a># 参考链接</h3><ul>
+<li><p><a href="https://blog.csdn.net/u010100466/article/details/72614545" rel="external nofollow noopener noreferrer" target="_blank">https://blog.csdn.net/u010100466/article/details/72614545</a></p>
+</li>
+<li><p><a href="https://www.jetbrains.com/help/idea/2016.1/run-debug-configuration-tomcat-server.html" rel="external nofollow noopener noreferrer" target="_blank">https://www.jetbrains.com/help/idea/2016.1/run-debug-configuration-tomcat-server.html</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/u012188141/article/details/80039942" rel="external nofollow noopener noreferrer" target="_blank">https://blog.csdn.net/u012188141/article/details/80039942</a></p>
+</li>
 </ul>
 
       
@@ -492,7 +593,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/" title="Hexo博客文章插入图片方式" target="_blank" rel="external">https://myxu.github.io/2018/04/26/Hexo博客文章插入图片方式/</a>
+      <a href="https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/" title="IDEA 部署JavaWeb项目到远程服务器的Tomcat" target="_blank" rel="external">https://myxu.github.io/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/</a>
     </li>
     
     <li class="post-copyright-license">
@@ -541,13 +642,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/2018/04/28/CentOS7-安装Tomcat9/" title="CentOS7 安装Tomcat9"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/2018/04/26/centOS7yum安装JDK8/" title="centOS7 yum安装JDK8"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/2018/04/28/CentOS7-安装Tomcat9/" title="CentOS7 安装Tomcat9"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
@@ -687,7 +784,7 @@ var gitment = new Gitment({
   // id默认为当前页面url，如果url后带参数或锚点，gitment要重新初始化
   // https://github.com/imsun/gitment/issues/55
   // 解决方案：id:window.location.pathname,或者将id设置为当前页面标题
-  id: 'Hexo博客文章插入图片方式', 
+  id: 'IDEA 部署JavaWeb项目到远程服务器的Tomcat', 
   owner: 'MYxu', // 可以是你的GitHub用户名，也可以是github id
   repo: 'myxu.github.io',
   oauth: {
