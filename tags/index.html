@@ -208,9 +208,6 @@
     <div class="widget-body">
         <div id="board">
             <div class="content">
-                <span id="busuanzi_container_site_pv">
-                    本站总访问量<span id="busuanzi_value_site_pv">0</span>次
-                </span>
                 <p>欢迎交流与分享经验!</p>
             </div>
         </div>
@@ -413,9 +410,9 @@
           
           <li><a href="/tags/hexo文章插入图片/">hexo文章插入图片</a></li>
           
-          <li><a href="/tags/IDEA/">IDEA</a></li>
-          
           <li><a href="/tags/jdk/">jdk</a></li>
+          
+          <li><a href="/tags/IDEA/">IDEA</a></li>
           
           <li><a href="/tags/hexo/">hexo</a></li>
           
@@ -582,40 +579,6 @@
       </div>
       
       <h3 class="panel-title mb-1x">
-        <a href="/tags/IDEA/" title="#IDEA"># IDEA</a>
-        <small class="text-muted">(Total 1 articles)</small>
-      </h3>
-      <div class="row">
-        
-        <div class="col-md-6">
-          
-<article class="panel panel-default hover-shadow hover-grow" itemscope="" itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2018-04-28T17:57:25.000Z" itemprop="datePublished">2018-04-29</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/">IDEA 部署JavaWeb项目到远程服务器的Tomcat</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/Tomcat/" class="label label-default mb">Tomcat</a>
-     
-      <a href="/tags/IDEA/" class="label label-default mb">IDEA</a>
-     
-     
-   </div>
-   
-</article>
-
-
-        </div>
-        
-      </div>
-      
-      <h3 class="panel-title mb-1x">
         <a href="/tags/jdk/" title="#jdk"># jdk</a>
         <small class="text-muted">(Total 1 articles)</small>
       </h3>
@@ -638,6 +601,40 @@
       <a href="/tags/java/" class="label label-default mb">java</a>
      
       <a href="/tags/jdk/" class="label label-default mb">jdk</a>
+     
+     
+   </div>
+   
+</article>
+
+
+        </div>
+        
+      </div>
+      
+      <h3 class="panel-title mb-1x">
+        <a href="/tags/IDEA/" title="#IDEA"># IDEA</a>
+        <small class="text-muted">(Total 1 articles)</small>
+      </h3>
+      <div class="row">
+        
+        <div class="col-md-6">
+          
+<article class="panel panel-default hover-shadow hover-grow" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="panel-body">
+     <div class="article-meta">
+       <time datetime="2018-04-28T17:57:25.000Z" itemprop="datePublished">2018-04-29</time>
+     </div>
+     <h3 class="article-title" itemprop="name">
+       <a class="article-link" href="/2018/04/29/IDEA-部署JavaWeb项目到远程服务器的Tomcat/">IDEA 部署JavaWeb项目到远程服务器的Tomcat</a>
+     </h3>
+   </div>
+   
+   <div class="panel-footer">
+     
+      <a href="/tags/Tomcat/" class="label label-default mb">Tomcat</a>
+     
+      <a href="/tags/IDEA/" class="label label-default mb">IDEA</a>
      
      
    </div>
@@ -804,9 +801,97 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
     
     
         
-<script defer src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+<!-- custom analytics part create by xiamo -->
+<script defer src="https://cdn1.lncld.net/static/js/av-min-1.2.1.js"></script>
+<script defer>
+AV.init({
+  appId: '3ooIGtGXlREdAVgx04xseJna-gzGzoHsz',
+  appKey: 'LK6XbYpuwRRV3xxxSwQNu40x'
+});
+
+function showTime(Counter) {
+	var query = new AV.Query(Counter);
+		var visitors= $('.leancloud_visitors');
+		query.greaterThanOrEqualTo("time", 0);		
+		query.find({
+			success: function(results) {
+				if (results.length == 0) {				
+					return;
+				}
+				var data = results;
+				visitors.each(function(){
+					var url = $(this).attr('id').trim();					
+					for (var i = 0; i < data.length; i++) {
+						var object = data[i];
+						var content = object.get('time');
+						var _url = object.get('url')
+						if(url == _url){
+							$(this).text(content);
+						}
+					}
+				})
+				
+			},
+			error: function(object, error) {
+				console.log("Error: " + error.code + " " + error.message);
+			}
+		});
+}
+
+function addCount(Counter) {
+	var Counter = AV.Object.extend("Counter");
+	url = $(".leancloud_visitors").attr('id').trim();
+	title = $(".leancloud_visitors").attr('data-flag-title').trim();
+	var query = new AV.Query(Counter);
+	query.equalTo("url", url);
+	query.find({
+		success: function(results) {
+			if (results.length > 0) {
+				var counter = results[0];
+				counter.fetchWhenSave(true);
+				counter.increment("time");
+				counter.save(null, {
+					success: function(counter) {
+						var content = counter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(counter, error) {
+						console.log('Failed to save Visitor num, with error message: ' + error.message);
+					}
+				});
+			} else {
+				var newcounter = new Counter();
+				newcounter.set("title", title);
+				newcounter.set("url", url);
+				newcounter.set("time", 1);
+				newcounter.save(null, {
+					success: function(newcounter) {
+					    console.log("newcounter.get('time')="+newcounter.get('time'));
+						var content = newcounter.get('time');
+						$(document.getElementById(url)).text(content);
+					},
+					error: function(newcounter, error) {
+						console.log('Failed to create');
+					}
+				});
+			}
+		},
+		error: function(error) {
+			console.log('Error:' + error.code + " " + error.message);
+		}
+	});
+}
+$(function() {
+	var Counter = AV.Object.extend("Counter");
+	if ($('.leancloud_visitors').length == 1) {
+		addCount(Counter);
+	} else {
+		showTime(Counter);
+	}
+}); 
+</script>
 
     
     
