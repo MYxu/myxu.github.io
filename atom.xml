@@ -97,33 +97,6 @@
   </entry>
   
   <entry>
-    <title>Hexo博客文章插入图片方式</title>
-    <link href="https://myxu.github.io/hexo/2018/04/26/Hexo%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E6%96%B9%E5%BC%8F/"/>
-    <id>https://myxu.github.io/hexo/2018/04/26/Hexo博客文章插入图片方式/</id>
-    <published>2018-04-26T14:58:30.000Z</published>
-    <updated>2018-04-26T15:05:20.244Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：</p><blockquote><ul><li>将图片存放在本地引用</li><li>将图片上传至一些CDN服务上，在通过链接引用</li></ul></blockquote><p>这里我就主要说明第一种方式是如何实现。</p><h3 id="本地引用"><a href="#本地引用" class="headerlink" title="本地引用"></a>本地引用</h3><h4 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h4><p>若是Hexo博客中只用到少数的图片的时，可以在hexo项目<code>source</code>文件夹下创建一个<code>images</code>文件夹统一存放需要的图片，然后再通过markdown语法访问即可。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">---source</span><br><span class="line">      |---_post(文章存放文件夹)</span><br><span class="line">  |      |---pictureTest.md</span><br><span class="line">  |</span><br><span class="line">  |---_images（图片存放文件夹）</span><br><span class="line">         |---picture.png</span><br><span class="line"></span><br><span class="line">markdown访问图片：![文字说明](/images/picture.png)</span><br></pre></td></tr></table></figure><p><strong>注意：</strong>这样的方式，图片不仅可以在文章中引用，还可以在首页内容中访问。</p><h4 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h4><p>上面的访问方式不好的地方就是图片多时容易混杂，不容易找到所需的。因此，一般最好对应文章引用的图片存放在相对应的目录。目前hexo已经实现了在创建新文章的时候创建对应的文章目录：</p><p><code>hexo项目下_config.yml文件</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder:true</span><br></pre></td></tr></table></figure></p><p>完成上述设置之后，在创建新文章的时候（hexo new “artice_name”），hexo会自动在文章同级目录下创建一个与文章同名的目录，我们可以将与文章相关的资源放置在该目录下，便于管理所需的资源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---source</span><br><span class="line">      |---_post(文章存放文件夹)</span><br><span class="line">  |      |---pictureTest.md</span><br><span class="line">  |      |</span><br><span class="line">  |      |---pictureTest(与文章同名的文件夹)</span><br></pre></td></tr></table></figure></p><p><strong>注意了：</strong>使用该方式在markdown文章中将不能再采用markdown语法或者相对路径去引用图片了，有可能会造成资源显示不正确。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">引用语法：&#123;% asset_img pictureTest.png this is an example image desc %&#125;</span><br></pre></td></tr></table></figure></p><p><strong>若是想使用该方式的同时能使用markdown语法，则需要安装插件</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在hexo项目下：install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure></p><p>即可使用markdown语法访问:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![image desc](/pictureTest.jpg)</span><br></pre></td></tr></table></figure></p><h3 id="CDN"><a href="#CDN" class="headerlink" title="CDN"></a>CDN</h3><p>这种方式一般是将图片上传至CDN中存储，同时得到图片的访问链接。常见比如七牛云，有空可以去尝试一下。</p><h3 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h3><ul><li><a href="https://hexo.io/zh-cn/docs/asset-folders.html" rel="external nofollow noopener noreferrer" target="_blank">https://hexo.io/zh-cn/docs/asset-folders.html</a></li><li><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" rel="external nofollow noopener noreferrer" target="_blank">https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/</a></li><li><a href="https://www.jianshu.com/p/c2ba9533088a" rel="external nofollow noopener noreferrer" target="_blank">https://www.jianshu.com/p/c2ba9533088a</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;通常我们在写博客文章的时候总免不了插入一些图片进行说明，而对于hexo来说主要有以下两种方式来引入图片：&lt;/p&gt;
-&lt;blockquote&gt;
-
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://myxu.github.io/hexo/categories/hexo/"/>
-    
-    
-      <category term="hexo文章插入图片" scheme="https://myxu.github.io/hexo/tags/hexo%E6%96%87%E7%AB%A0%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
     <title>centOS7 yum安装JDK8</title>
     <link href="https://myxu.github.io/hexo/2018/04/26/centOS7yum%E5%AE%89%E8%A3%85JDK8/"/>
     <id>https://myxu.github.io/hexo/2018/04/26/centOS7yum安装JDK8/</id>
@@ -197,30 +170,6 @@
     
     
       <category term="Oracle" scheme="https://myxu.github.io/hexo/tags/Oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello hexo</title>
-    <link href="https://myxu.github.io/hexo/2017/09/15/helo-hexo/"/>
-    <id>https://myxu.github.io/hexo/2017/09/15/helo-hexo/</id>
-    <published>2017-09-15T05:45:24.000Z</published>
-    <updated>2018-05-18T04:23:36.504Z</updated>
-    
-    <content type="html"><![CDATA[<p>搞了一天，基本将自己想要的东西都弄好了，接下来就要好好坚持总结、写技术博客了<br><a id="more"></a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;搞了一天，基本将自己想要的东西都弄好了，接下来就要好好坚持总结、写技术博客了&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://myxu.github.io/hexo/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://myxu.github.io/hexo/tags/hexo/"/>
-    
-      <category term="php" scheme="https://myxu.github.io/hexo/tags/php/"/>
     
   </entry>
   
