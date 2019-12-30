@@ -1,1 +1,1 @@
-https://myxu.github.io/blog/2019/07/07/自动部署测试/
+https://myxu.github.io/hexo/2019/07/07/自动部署测试/
