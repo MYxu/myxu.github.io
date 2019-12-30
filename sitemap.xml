@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://myxu.github.io/hexo/2017/11/16/manualy-creating-the-oracle-database/</loc>
+    
+    <lastmod>2019-12-30T13:47:50.205Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://myxu.github.io/hexo/2018/04/28/CentOS7-%E5%AE%89%E8%A3%85Tomcat9/</loc>
+    
+    <lastmod>2019-12-30T13:47:46.382Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://myxu.github.io/hexo/2019/07/07/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E6%B5%8B%E8%AF%95/</loc>
     
     <lastmod>2019-07-07T04:50:39.697Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>https://myxu.github.io/hexo/2018/04/28/CentOS7-%E5%AE%89%E8%A3%85Tomcat9/</loc>
-    
-    <lastmod>2018-04-28T07:12:35.481Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://myxu.github.io/hexo/2018/04/26/centOS7yum%E5%AE%89%E8%A3%85JDK8/</loc>
     
     <lastmod>2018-04-26T12:41:21.117Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://myxu.github.io/hexo/2017/11/16/manualy-creating-the-oracle-database/</loc>
-    
-    <lastmod>2017-12-04T15:31:28.633Z</lastmod>
     
   </url>
   
