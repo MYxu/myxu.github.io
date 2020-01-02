@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Clannad</title>
+  <title>个人php技术分享</title>
   
   <subtitle>life will find  its way out.</subtitle>
   <link href="/hexo/atom.xml" rel="self"/>
