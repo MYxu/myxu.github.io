@@ -6,7 +6,7 @@
   <link href="/hexo/atom.xml" rel="self"/>
   
   <link href="https://myxu.github.io/hexo/"/>
-  <updated>2019-07-07T04:50:39.697Z</updated>
+  <updated>2020-01-02T16:26:50.143Z</updated>
   <id>https://myxu.github.io/hexo/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP升级到7.4.1实验记录</title>
+    <link href="https://myxu.github.io/hexo/2020/01/03/PHP%E5%8D%87%E7%BA%A7%E5%88%B07-4-1%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95/"/>
+    <id>https://myxu.github.io/hexo/2020/01/03/PHP升级到7-4-1实验记录/</id>
+    <published>2020-01-02T16:25:53.000Z</published>
+    <updated>2020-01-02T16:26:50.143Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="更新PHP到7-4-1版本记录（CentOS7）"><a href="#更新PHP到7-4-1版本记录（CentOS7）" class="headerlink" title="更新PHP到7.4.1版本记录（CentOS7）"></a>更新PHP到7.4.1版本记录（CentOS7）</h3><p><code>实验环境</code></p><ul><li>腾讯云CentOS7服务器</li><li>root身份登录</li></ul><h4 id="1、安装所需的EPEL、REMI源"><a href="#1、安装所需的EPEL、REMI源" class="headerlink" title="#1、安装所需的EPEL、REMI源"></a>#1、安装所需的EPEL、REMI源</h4><p>CentOS7自身的源并没有最新的PHP7.4.1包，我们需要而外从其他源中获取，所以首先要安装这些第三方的源。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br><span class="line">yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm</span><br></pre></td></tr></table></figure></p><h4 id="2、启用remi源"><a href="#2、启用remi源" class="headerlink" title="#2、启用remi源"></a>#2、启用remi源</h4><p>进入到<strong>/etc/yum.repos.d/</strong>目录，你会发现remi源提供了多个版本的PHP包，这里我们只要启用7.4版本的就行了。<br><img src="https://myxu-blog-image-1252642211.cos.ap-guangzhou.myqcloud.com/redis-muke-study-notes/20200102234434.png" alt=""></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">## yum-utils包扩展了yum包管理器额外的功能</span><br><span class="line">yum -y install yum-utils</span><br><span class="line">## 启用PHP7.4版本的remi源</span><br><span class="line">yum-config-manager --enable remi-php74</span><br></pre></td></tr></table></figure><p><img src="https://myxu-blog-image-1252642211.cos.ap-guangzhou.myqcloud.com/redis-muke-study-notes/20200102235610.png" alt=""></p><h4 id="3、卸载之前安装的PHP"><a href="#3、卸载之前安装的PHP" class="headerlink" title="#3、卸载之前安装的PHP"></a>#3、卸载之前安装的PHP</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove php php*</span><br></pre></td></tr></table></figure><h4 id="4、安装PHP7-4-amp-amp-相关扩展"><a href="#4、安装PHP7-4-amp-amp-相关扩展" class="headerlink" title="#4、安装PHP7.4 &amp;&amp; 相关扩展"></a>#4、安装PHP7.4 &amp;&amp; 相关扩展</h4><ul><li><p>查看可安装的包</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum list | grep php74</span><br></pre></td></tr></table></figure></li><li><p>安装php &amp;&amp; php-cli</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install php php-cli</span><br></pre></td></tr></table></figure></li><li><p>安装扩展</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install php-fpm php-pdod等</span><br></pre></td></tr></table></figure></li><li><p>安装后再次查看，包来源前面带有<strong>@</strong>符号说明该包已经安装<br><img src="/hexo/hexo/2020/01/03/PHP升级到7-4-1实验记录/c6a9fbaa-86f6-4d7f-8281-02e07af07c60.png" alt=""></p></li></ul><h4 id="4、检测PHP版本-amp-amp-已安装扩展"><a href="#4、检测PHP版本-amp-amp-已安装扩展" class="headerlink" title="#4、检测PHP版本 &amp;&amp; 已安装扩展"></a>#4、检测PHP版本 &amp;&amp; 已安装扩展</h4><ul><li>php版本<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -v</span><br></pre></td></tr></table></figure></li></ul><p><img src="https://myxu-blog-image-1252642211.cos.ap-guangzhou.myqcloud.com/redis-muke-study-notes/20200103001330.png" alt=""></p><ul><li>已安装的PHP扩展<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -m</span><br></pre></td></tr></table></figure></li></ul><p><img src="https://myxu-blog-image-1252642211.cos.ap-guangzhou.myqcloud.com/redis-muke-study-notes/20200103001416.png" alt=""></p><p><code>注意</code>：</p><ul><li>这里我遇到了一个问题，安装后我直接运行上面命令会报错<strong>-bash: php: command not found</strong>，之后我关闭了<strong>xshell</strong>连接窗口后重新连接，再次运行则成功了。</li><li>推测原因就是安装成功后，php的可执行文件路径被写入到系统环境变量中，但是对于当前窗口使用还是之前的系统环境变量信息，才会导致报错说php命令找不到，因为旧的php被卸载了，而新还未生效。windows下同样如此，cmd安装了新东西并修改了环境变量，需要重新打开cmd才能使新的环境变量生效、</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;更新PHP到7-4-1版本记录（CentOS7）&quot;&gt;&lt;a href=&quot;#更新PHP到7-4-1版本记录（CentOS7）&quot; class=&quot;headerlink&quot; title=&quot;更新PHP到7.4.1版本记录（CentOS7）&quot;&gt;&lt;/a&gt;更新PHP到7.4.1版本记
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="https://myxu.github.io/hexo/categories/PHP/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>自动部署测试</title>
